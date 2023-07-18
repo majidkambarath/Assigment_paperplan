@@ -1,5 +1,5 @@
 
-import logo from '../assets/paper.png'
+import logo from '../../../assets/paper.png'
 function Footer() {
     return (
         <footer className='bg-gray-200 mt-4 pb-8'>

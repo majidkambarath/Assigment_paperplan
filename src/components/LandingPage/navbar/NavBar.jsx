@@ -1,5 +1,5 @@
 import { useState } from "react"
-import logo from '../assets/paper.png'
+import logo from '../../../assets/paper.png'
 
 function NavBar() {
 const [show, setShow] = useState(false)

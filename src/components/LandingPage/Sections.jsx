@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import logo from '../assets/paper.png'
+import logo from '../../assets/paper.png'
 import ClinicSection from './ClinicSection'
 import BusinessSections from './BusinessSections'
 
