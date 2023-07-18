@@ -42,7 +42,7 @@ function BusinessSections() {
             </div>
             <div className='border'></div>
 
-            <div className="mt-12">
+            <div className="mt-12 p-4">
                 <div className="flex flex-col-reverse md:flex-col-reverse  sm:flex-col-reverse lg:flex-row justify-around items-center">
                     <div>
                         <h3 className="text-4xl  md:w-[500px] font-medium">Provide seamless patient experience &  <span className="text-[#19BCCC]">improve retention </span></h3>
