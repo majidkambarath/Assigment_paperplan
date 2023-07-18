@@ -3,7 +3,7 @@
 function ClinicSection() {
     return (
         <>
-            <div className='flex flex-wrap flex-grow gap-3 mt-12 mx-auto p-4 max-w-screen-xl justify-center'>
+            <div className=' flex flex-wrap flex-grow gap-3 mt-12 mx-auto p-4 max-w-screen-xl justify-center'>
                 <div className='p-6  rounded-lg'>
                     <span className='font-semibold'>Paperplane</span> {" "}<span className='bg-green-600 rounded-lg text-white py-2 px-2'>Clinic</span>
                     <br />
@@ -34,10 +34,10 @@ function ClinicSection() {
             <div className='border'></div>
 
 
-            <div className="mt-12">
+            <div className="mt-12 p-4">
                 <div className="flex flex-col-reverse md:flex-col-reverse  sm:flex-col-reverse lg:flex-row justify-around items-center">
                     <div>
-                        <h3 className="text-4xl  md:w-[500px] font-medium">WhatsApp clinic <span className="text-[#19BCCC]">that's open 24/7 🏪</span></h3>
+                        <h3 className="text-4xl  md:w-[500px] font-medium">WhatsApp clinic <span className="text-[#19BCCC]">that s open 24/7 🏪</span></h3>
                         <div className="text-xl text-gray-600 mt-2">
                             <ul className="list-disc list-inside ">
                                 <li>Allow patients to book appoinments</li>

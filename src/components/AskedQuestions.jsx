@@ -2,11 +2,11 @@
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react'
 function AskedQuestions() {
     return (
-        <div className='mt-12 mx-auto p-4  max-w-screen-xl'>
+        <div className='mt-12 mx-auto p-4  max-w-screen-xl mb-12'>
             <h3 className="text-center text-4xl mb-4 text-gray-700 font-bold">Frequently asked questions</h3>
 
             <Accordion className='w-full' allowMultiple>
-                <AccordionItem className='border rounded-2xl border-gray-200 py-[25px] mt-2 shadow-lg'>
+                <AccordionItem className='border rounded-2xl border-gray-200 py-[25px] mt-6 shadow-lg'>
                     <h2>
                         <AccordionButton className='flex justify-between'>
                             <span className='text-left ml-5 font-normal text-lg text-gray-600 ' flex='1' textAlign='left'>
@@ -22,7 +22,7 @@ function AskedQuestions() {
 
                 {" "}
 
-                <AccordionItem className='border rounded-2xl border-gray-200 py-[25px] mt-2 shadow-lg'>
+                <AccordionItem className='border rounded-2xl border-gray-200 py-[25px] mt-6 shadow-lg'>
                     <h2>
                         <AccordionButton className='flex justify-between'>
                             <span className='text-left ml-5 font-normal text-lg text-gray-600 ' flex='1' textAlign='left'>
@@ -36,7 +36,7 @@ function AskedQuestions() {
                     </AccordionPanel>
                 </AccordionItem>
 
-                <AccordionItem className='border rounded-2xl border-gray-200 py-[25px] mt-2 shadow-lg'>
+                <AccordionItem className='border rounded-2xl border-gray-200 py-[25px] mt-6 shadow-lg'>
                     <h2>
                         <AccordionButton className='flex justify-between'>
                             <span className='text-left ml-5 font-normal text-lg text-gray-600 ' flex='1' textAlign='left'>
