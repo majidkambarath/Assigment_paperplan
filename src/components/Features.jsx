@@ -4,7 +4,7 @@ function Features() {
   return (
     <div className="mt-12 mx-auto p-4  max-w-screen-xl">
         <h3 className="font-bold text-3xl text-gray-700 text-center">Features & services</h3>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mt-12">
 
         <div className="grid grid-cols lg:grid-cols-3 mt-12 gap-y-5">
             <div className="flex-col flex items-center lg:items-baseline justify-start ">

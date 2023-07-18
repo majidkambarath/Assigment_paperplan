@@ -17,8 +17,8 @@ function App() {
       <div className="mt-32">
       <MainContent />
       <CompanyCarousel />
-      <Sections />
       <TrustCounts />
+      <Sections />
       <Features />
       <GetStarted />
       <Contact />

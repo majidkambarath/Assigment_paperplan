@@ -7,7 +7,7 @@ import BusinessSections from './BusinessSections'
 function Sections() {
     const [change, setChange] = useState(false)
     return (
-        <div>
+        <div className='mt-12'>
             <div className="text-center flex justify-center">
                 <img src={logo} className=' h-12 sm:h-12 md:h-12 lg:h-12 mr-3"' alt="logo" />
             </div>
