@@ -3,7 +3,7 @@
 function ClinicSection() {
     return (
         <>
-            <div className='flex gap-3 mt-12 mx-auto p-4 max-w-screen-xl justify-center'>
+            <div className='flex flex-wrap flex-grow gap-3 mt-12 mx-auto p-4 max-w-screen-xl justify-center'>
                 <div className='p-6  rounded-lg'>
                     <span className='font-semibold'>Paperplane</span> {" "}<span className='bg-green-600 rounded-lg text-white py-2 px-2'>Clinic</span>
                     <br />
