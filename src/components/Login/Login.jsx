@@ -1,19 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React  from "react";
 import leftimg from "../../assets/loginAsset.png";
 import logo from "../../assets/paper.png";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa";
 import LoginForm from "../AuthForm/LoginForm";
+import { NavLink } from "react-router-dom";
 export default function Login() {
-  // const inputRef = useRef(null);
-  // const [hide, setHide] = useState(false);
-  // // const [change,setChange] = useState('text')
-  // useEffect(() => {
-  //   if (inputRef.current) {
-  //     inputRef.current.focus();
-  //     // inputRef.current.setSelectionRange(inputRef.current.value.length, inputRef.current.value.length);
-  //   }
-  // }, []);
   return (
     <>
       <div className="bg-slate-50 w-full  h-screen flex md:flex-row flex-col">
@@ -35,7 +25,12 @@ export default function Login() {
              <LoginForm/>
              <div className="mt-5 md:ml-[150px] ml-4">
               <h1 className="text-blue-600 font-sans text-md cursor-pointer">Forgot Password?</h1>
-              <h1 className="text-black font-sans text-md ">Don’t have an account? <span className="text-blue-600 cursor-pointer">Sign up</span> </h1>
+              <h1 className="text-black font-sans text-md ">Don’t have an account?
+              <NavLink to={'/signup'}>
+              <span className="text-blue-600 cursor-pointer">Sign up</span>
+              </NavLink>
+              
+                </h1>
              </div>
         </div>
       </div>

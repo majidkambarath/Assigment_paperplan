@@ -18,6 +18,13 @@ export const loginSchema = yup.object().shape({
     .min(8, "Invalid Password")
     .max(16, "Invalid Password"),
   });
+  export const phoneSchema = yup.object().shape({
+    phone: yup
+    .string()
+    .trim()
+    .matches(/^[0-9]{10}$/, "Phone number is not valid")
+    .required("Phone number is required"),
+  })
 //   export const loginSchema = yup.object().shape({
 //     email: yup
 //       .string()
