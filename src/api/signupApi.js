@@ -19,8 +19,8 @@ export const VerifyOtp = async(data)=>{
 
 export const ResendOtpApi = async(phone)=>{
     try {
-        const resend = await axios.post('/resend',{phone})
-        return resend
+        const resendOtp = await axios.post('/resendotp',phone)
+        return resendOtp
     } catch (error) {
         console.log(error)
     }

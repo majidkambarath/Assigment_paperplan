@@ -1,5 +1,5 @@
-
-
+import React from "react"
+import { NavLink } from "react-router-dom"
 function MainContent() {
   return (
     <main className="mt-12 mx-auto p-4  max-w-screen-xl">
@@ -10,7 +10,9 @@ function MainContent() {
 
             <div className="flex  flex-col md:flex-row gap-3 mt-4">
                 <button className="bg-gradient-to-r hover:bg-gradient-to-l  from-[#4D63DD] to-[#22A1F5] rounded-full py-3 px-5 text-white text-2xl font-semibold">Start 15-days trial now</button>
-                <button className="border border-blue-600 rounded-full py-3 px-5 text-2xl font-semibold hover:shadow-md hover:bg-gray-100"> Book a demo </button>
+               <NavLink to={'/booking'}>
+               <button className="border border-blue-600 rounded-full py-3 px-5 text-2xl font-semibold hover:shadow-md hover:bg-gray-100"> Book a demo </button>
+                </NavLink>
             </div>
             <p className=" mt-3 ml-3 text-lg">Takes less than 60s ⚡</p>
             

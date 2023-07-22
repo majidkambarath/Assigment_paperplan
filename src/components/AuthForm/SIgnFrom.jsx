@@ -5,8 +5,11 @@ import { FaEyeSlash } from "react-icons/fa";
 import { SignupSchema } from "../../Schema/authSignUp";
 import { useSelector } from "react-redux";
 import { AuthsubmissionApi } from "../../api/signupApi";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 export default function SignupForm() {
   const phoneNumber = useSelector((state) => state.number.phoneNumber);
+  const navigate = useNavigate()
    const inputRef = useRef(null);
   const [hide, setHide] = useState(false);
   const [chide , setChide] = useState(false);
@@ -28,8 +31,11 @@ const [phone , setphone ] = useState(phoneNumber.phone)
         validationSchema={SignupSchema}
         onSubmit={(values) => {
           AuthsubmissionApi(values).then((res)=>{
-            console.log(res.data)
-          })
+             if(res.data.success===true){
+               toast.success('successfully completed')
+               navigate('/login')
+             }
+          }).catch((err) => console.log(err))
         }}
       >
         {({ errors, touched }) => (

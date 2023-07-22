@@ -2,9 +2,12 @@ import React  from "react";
 import leftimg from "../../assets/loginAsset.png";
 import logo from "../../assets/paper.png";
 import LoginForm from "../AuthForm/LoginForm";
-import { NavLink } from "react-router-dom";
+import { NavLink,Navigate } from 'react-router-dom'
 export default function Login() {
-  return (
+  const token = localStorage.getItem("user");
+  return token ? (
+    <Navigate to={'/'}/>
+  ) : (
     <>
       <div className="bg-slate-50 w-full  h-screen flex md:flex-row flex-col">
         <div className="md:w-[600px] md:h-screen  bg-white md:rounded-tr-[50px]">

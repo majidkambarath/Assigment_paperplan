@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ResendOtpApi, VerifyOtp } from "../../api/signupApi";
+import axios from "axios";
 export default function AuthOtp() {
   const phoneNumber = useSelector((state) => state.number.phoneNumber);
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ export default function AuthOtp() {
   const [otp, setOtp] = useState("");
   console.log(otp);
   const phone = phoneNumber.phone;
+
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
@@ -47,15 +49,21 @@ export default function AuthOtp() {
         console.log(err);
       });
   };
-  const handleResend = async () => {
-    ResendOtpApi(phone)
-      .then((res) => {
-        if (res.data.success === true) {
-          toast.success("resend otp");
-        }
-      })
-      .catch((err) => console.log(err));
-  };
+
+  const handleResend = async() => {
+         
+    await axios.post('http://localhost:2222/api/resendotp',{data:`${phone}`},
+    {
+      withCredentials: true,
+    }).then((res)=>{
+      
+     if(res.data.success===true){
+      toast.success("resend otp");
+     }
+    }).catch((err)=>console.log(err))
+
+   
+ };
   return (
     <>
       <div className="bg-white h-screen w-full">
@@ -119,6 +127,7 @@ export default function AuthOtp() {
                   </h1>
                 </button>
               </div>
+
               <h1
                 onClick={handleResend}
                 className="text-yellow-600 cursor-pointer md:ml-5 ml-14 mt-1 "

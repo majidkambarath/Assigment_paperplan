@@ -8,6 +8,7 @@ export default function AuthSignup() {
   return (
     <>
       <div className="bg-white h-screen w-full">
+        
         <div className="flex justify-center items-center py-10">
           <img className="w-[150px] " src={Brand} alt="logo_png" />
         </div>

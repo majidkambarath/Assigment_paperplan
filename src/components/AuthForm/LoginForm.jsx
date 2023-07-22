@@ -3,7 +3,11 @@ import { Formik, Form, Field } from "formik";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { loginSchema } from "../../Schema/authlogin";
+import { AuthLogin } from "../../api/loginApi";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 export default function LoginForm() {
+  const navigate = useNavigate()
    const inputRef = useRef(null);
   const [hide, setHide] = useState(false);
   useEffect(() => {
@@ -21,7 +25,19 @@ export default function LoginForm() {
         }}
         validationSchema={loginSchema}
         onSubmit={(values) => {
-          console.log(values);
+           AuthLogin(values).then((res)=>{
+            if(res.data.userData && res.data.token){
+              localStorage.setItem("user", res.data.token);
+               toast.success('Welcome')
+                navigate('/')
+            }
+          if(res.data.action===false){
+            toast.error('Password Not Matching')
+
+          } else if (res.data.success===false){
+              toast.error('Invalid Credentials')
+          }
+           })
         }}
       >
         {({ errors, touched }) => (

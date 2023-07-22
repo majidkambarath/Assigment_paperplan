@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import AskedQuestions from "../LandingPage/AskedQuestions"
 import CompanyCarousel from "../LandingPage/CompanyCarousel"
 import Contact from "../LandingPage/contact/Contact"
@@ -9,7 +9,10 @@ import MainContent from "../LandingPage/MainContent"
 import NavBar from "../LandingPage/navbar/NavBar"
 import Sections from "../LandingPage/Sections"
 import TrustCounts from "../LandingPage/TrustCounts"
+import { useNavigate } from 'react-router-dom'
+
 export default function Home() {
+ 
   return (
    
         <div>

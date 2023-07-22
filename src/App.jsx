@@ -6,6 +6,9 @@ import AuthVerify from './pages/AuthVerify';
 import AuthOtpPage from './pages/AuthOtp';
 import AuthSignUpPage from './pages/AuthSignUp';
 import HostToast from "./components/Toastify/Toast";
+import BookingPage from './pages/BookingPage';
+import PaymentPage from './pages/PaymentPage';
+import Protect from './utils/ProtectorRouter/userRouter'
 export default function App() {
   return (
     <div>
@@ -16,6 +19,10 @@ export default function App() {
           <Route path={"/signup"} element={<AuthVerify/>} />
           <Route path={"/otp"} element={<AuthOtpPage/>} />
           <Route path={"/authsignup"} element={<AuthSignUpPage/>} />
+          <Route element={<Protect/>}>
+          <Route path={"/booking"} element={<BookingPage/>} />
+          <Route path={"/payment"} element={<PaymentPage/>} />
+          </Route>
         </Routes>
       </BrowserRouter>
       <HostToast />
