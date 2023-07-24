@@ -5,13 +5,14 @@ import otpimg from "../../assets/bgremove.png";
 import { BiSolidEditAlt } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsSendFill } from "react-icons/bs";
-import "./SendButton.css";
+import "../Signup/SendButton.css";
 import toast from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ResendOtpApi, VerifyOtp } from "../../api/user/signupApi";
+// import { ResendOtpApi, VerifyOtp } from "../../api/user/signupApi";
 import axios from "axios";
-export default function AuthOtp() {
+import { forgotVerifyOtp } from "../../api/user/loginApi";
+export default function OtpSenderForgot() {
   const phoneNumber = useSelector((state) => state.number.phoneNumber);
   const navigate = useNavigate();
   const inputRef = useRef(null);
@@ -36,11 +37,12 @@ export default function AuthOtp() {
       otp,
       phone,
     };
-    VerifyOtp(data)
+    forgotVerifyOtp(data)
       .then((res) => {
+        console.log(res.data)
         if (res.data.success === true) {
           toast.success("Success");
-          navigate("/authsignup");
+          navigate("/forgotPassForm");
         } else if (res.data.action === false) {
           toast.error("otp invaild");
         }
@@ -52,7 +54,7 @@ export default function AuthOtp() {
 
   const handleResend = async() => {
          
-    await axios.post('http://localhost:2222/api/resendotp',{data:`${phone}`},
+    await axios.post('http://localhost:2222/api/forgotresendotp',{data:`${phone}`},
     {
       withCredentials: true,
     }).then((res)=>{
@@ -82,7 +84,7 @@ export default function AuthOtp() {
             </div>
             <div className="md:w-[500px] ml-5">
               <h1 className="font-sans text-xl font-semibold ml-10 py-6 underline md:no-underline ">
-                Create an Account
+                Create a New Password
               </h1>
               <img
                 className="md:w-[200px] w-[250px]  ml-5 -mt-3"
@@ -93,7 +95,7 @@ export default function AuthOtp() {
                 <h1 className="font-sans text-xl">
                   OTP sent to <strong>+91-{phoneNumber.phone}</strong>{" "}
                 </h1>
-                <NavLink to={'/signup'}>
+                <NavLink to={'/forgotPass'}>
                 <h1 className="ml-2 mt-1 text-xl text-gray-500 cursor-pointer">
                   <BiSolidEditAlt />{" "}
                 </h1>

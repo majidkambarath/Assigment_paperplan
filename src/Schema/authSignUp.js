@@ -30,3 +30,21 @@ export const SignupSchema = yup.object().shape({
     .required("Confirm password can't be empty")
     .oneOf([yup.ref("password")], "Passwords must match"),
 });
+
+export const ForgotPassSchema = yup.object().shape({
+  password: yup
+    .string()
+    .trim()
+    .required("Required")
+    .min(8, "Invalid Password")
+    .max(16, "Invalid Password"),
+
+  cpassword: yup
+    .string()
+    .trim()
+    .required("Confirm password can't be empty")
+    .oneOf([yup.ref("password")], "Passwords must match"),
+});
+
+
+

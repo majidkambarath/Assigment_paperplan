@@ -27,7 +27,10 @@ export default function Login() {
           </div>
              <LoginForm/>
              <div className="mt-5 md:ml-[150px] ml-4">
+           
+             <NavLink to={'/forgotPass'}>
               <h1 className="text-blue-600 font-sans text-md cursor-pointer">Forgot Password?</h1>
+             </NavLink>
               <h1 className="text-black font-sans text-md ">Don’t have an account?
               <NavLink to={'/signup'}>
               <span className="text-blue-600 cursor-pointer">Sign up</span>
