@@ -1,4 +1,4 @@
-import axios from '../axios/axios'
+import axios from '../../axios/axios'
 export const AuthLogin = async(valus)=>{
     try {
         const resData = await axios.post('/authlogin',valus)

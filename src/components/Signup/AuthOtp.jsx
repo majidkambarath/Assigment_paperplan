@@ -9,7 +9,7 @@ import "./SendButton.css";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ResendOtpApi, VerifyOtp } from "../../api/signupApi";
+import { ResendOtpApi, VerifyOtp } from "../../api/user/signupApi";
 import axios from "axios";
 export default function AuthOtp() {
   const phoneNumber = useSelector((state) => state.number.phoneNumber);

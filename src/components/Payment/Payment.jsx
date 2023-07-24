@@ -10,12 +10,13 @@ import img3 from "../../assets/3.png";
 import img4 from "../../assets/4.png";
 import { SiGooglepay } from "react-icons/si";
 import { BsCurrencyRupee } from "react-icons/bs";
-import { fetchBookingData } from "../../api/bookingApi";
-// import { typography } from "@chakra-ui/react";
+import { fetchBookingData } from "../../api/user/bookingApi";
+import { useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.png'
 import { toast } from "react-hot-toast";
 
 export default function Payment() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState([]);
   const [change, setChange] = useState(true);
   console.log(formData);
@@ -70,11 +71,11 @@ const submitPayment = async(total,name,phone,ID)=>{
                   };
                  
                   try {
-                     const result = axios.post('http://localhost:2222/api/paymentsuccess',{paymentData},{ withCredentials: true,})
-                     console.log(result?.data);
+                     const result = await axios.post('http://localhost:2222/api/paymentsuccess',{paymentData},{ withCredentials: true,})
+                     console.log(result.data);
                      if(result.data.success===true){
                         toast.success('payment success')
-                      navigate('/', {state: "payment"})
+                      navigate('/',{state: "payment"})
                      }
                     
                   } catch (error) {
@@ -82,7 +83,6 @@ const submitPayment = async(total,name,phone,ID)=>{
                     
                     
                   }
-                  console.log(paymentData);
                 },
                 prefill: {
                     name: name,
@@ -135,71 +135,71 @@ const submitPayment = async(total,name,phone,ID)=>{
         </div>
         <div className="w-full shadow-xl drop-shadow-2xl shadow-slate-400 h-7 -mt-[29px] "></div>
         <div
-          className={`flex justify-center items-center ${
+          className={`flex justify-center items-center  ${
             change ? "h-[650px]" : "h-[400px]"
           } `}
         >
           {change ? (
             <div
-              className={`w-2/3 bg-slate-200 ${
+              className={`md:w-2/3 w-[390px] bg-slate-200 ${
                 change ? "h-[550px]" : "h-[400px]"
               } rounded-xl`}
             >
               <div className="flex justify-center items-center">
-                <h1 className="text-3xl font-sans font-semibold mt-10">
+                <h1 className="md:text-3xl  text-xl font-sans font-semibold mt-10">
                   With Buy Now, Pay Later you get
                 </h1>
               </div>
-              <div className="flex justify-evenly mt-10 ml-[100px]">
-                <div className="w-[250px] ml-7 ">
+              <div className="flex justify-evenly mt-10 md:ml-[100px]">
+                <div className="md:w-[250px] ml-7 ">
                   <img
-                    className="w-16 ml-10 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
+                    className="md:w-16 w-14 ml-10 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
                     src={img1}
                     alt="img1-png"
                   />
-                  <h1 className="font-bold text-lg font-Montserrat -ml-7 mt-2">
+                  <h1 className="font-bold md:text-lg  font-Montserrat md:-ml-7 mt-2">
                     Under 1 Minute approval
                   </h1>
-                  <h1 className="font-semibold -ml-7">
+                  <h1 className="font-semibold md:-ml-7">
                     By putting your health ahead of paperwork and logistics
                   </h1>
                 </div>
-                <div className="w-[300px] ml-7">
+                <div className="md:w-[300px] ml-7">
                   <img
-                    className="w-16 ml-10 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
+                    className="md:w-16 w-14 ml-10 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
                     src={img2}
                     alt="img1-png"
                   />
-                  <h1 className="font-bold text-lg font-Montserrat -ml-7 mt-2">
+                  <h1 className="font-bold md:text-lg font-Montserrat -ml-7 mt-2">
                     Repayments via WhatsApp
                   </h1>
-                  <h1 className="font-semibold -ml-7">
+                  <h1 className="font-semibold md:-ml-7">
                     Pay securely via whatsapp without downloading or using any
                     application
                   </h1>
                 </div>
               </div>
-              <div className="flex justify-evenly mt-10 ml-[80px]">
-                <div className="w-[250px] ml-7  ">
+              <div className="flex justify-evenly md:mt-10 md:ml-[80px]">
+                <div className="md:w-[250px] ml-7  ">
                   <img
-                    className="w-16 ml-10 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
+                    className="md:w-16 w-14 ml-10 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
                     src={img3}
                     alt="img1-png"
                   />
-                  <h1 className="font-bold text-lg font-Montserrat -ml-7 mt-2">
+                  <h1 className="font-bold md:text-lg font-Montserrat md:-ml-7 mt-2">
                     Flexible Payment Tenure
                   </h1>
-                  <h1 className="font-semibold -ml-7">
+                  <h1 className="font-semibold md:-ml-7">
                     Now you decide when and how much to pay in installments
                   </h1>
                 </div>
-                <div className="w-[250px] ml-7">
+                <div className="md:w-[250px] ml-7">
                   <img
-                    className="w-16 ml-9 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
+                    className="md:w-16 w-14 ml-9 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300"
                     src={img4}
                     alt="img1-png"
                   />
-                  <h1 className="font-bold text-lg font-Montserrat -ml-7 mt-2">
+                  <h1 className="font-bold md:text-lg font-Montserrat md:-ml-7 mt-2">
                     No Third-party intervention
                   </h1>
                   <h1 className="font-semibold -ml-7">
@@ -210,7 +210,7 @@ const submitPayment = async(total,name,phone,ID)=>{
               <div className="flex justify-center">
                 <button
                   onClick={() => setChange(false)}
-                  className={`mt-10 text-purple-600 text-xl font-Montserrat  transition ease-in-out delay-150 ${formData?.length>1 ? 'block' : 'hidden'}  hover:-translate-y-1 hover:scale-100 duration-300`}
+                  className={`mt-10 text-purple-600 text-xl font-Montserrat  transition ease-in-out delay-150 ${formData?.length>= 1 ? 'block' : 'hidden'}  hover:-translate-y-1 hover:scale-100 duration-300`}
                 >
                  Booking Summary
                 </button>

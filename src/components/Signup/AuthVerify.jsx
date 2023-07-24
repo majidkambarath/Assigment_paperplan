@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setPhoneNumber } from "../../store/slice/Authnumber";
 import Loader from "../Loader/Loader";
-import { AuthOtpSend } from "../../api/signupApi";
+import { AuthOtpSend } from "../../api/user/signupApi";
 export default function AuthVerify() {
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();

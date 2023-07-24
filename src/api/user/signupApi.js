@@ -1,4 +1,4 @@
-import axios from '../axios/axios'
+import axios from '../../axios/axios'
 export const AuthOtpSend = async(phone)=>{
     try {
         const resData = await axios.post('/sendotp',phone)
@@ -35,3 +35,16 @@ export const AuthsubmissionApi = async(value)=>{
         console.log(error)
     }
 } 
+
+export const StartChatBotApi = async()=>{
+    try {
+        const res = await axios.get('/startChatBot',{
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("user")}`,
+              },
+        })
+        return res
+    } catch (error) {
+        console.log(error)
+    }
+}

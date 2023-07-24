@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import Brand from "../../assets/paper.png";
 import Phone from "../../assets/Group.png";
-import { bookingFormApi } from "../../api/bookingApi";
+import { bookingFormApi } from "../../api/user/bookingApi";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 export default function BookingUI() {

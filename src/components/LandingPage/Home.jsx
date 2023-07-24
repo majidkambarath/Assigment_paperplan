@@ -9,10 +9,18 @@ import MainContent from "../LandingPage/MainContent"
 import NavBar from "../LandingPage/navbar/NavBar"
 import Sections from "../LandingPage/Sections"
 import TrustCounts from "../LandingPage/TrustCounts"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,useLocation } from 'react-router-dom'
 
 export default function Home() {
- 
+  const navigate = useNavigate()
+  const location = useLocation()
+  useEffect(() => {
+    window.onpopstate = e => {
+      if(location?.state === "payment"){
+        navigate('/')
+      }
+    };
+  });
   return (
    
         <div>

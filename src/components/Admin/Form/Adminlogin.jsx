@@ -2,60 +2,61 @@ import React, { useRef, useEffect, useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { loginSchema } from "../../Schema/authlogin";
-import { AuthLogin } from "../../api/user/loginApi";
+import { AdminLoginSchema } from "../../../Schema/adminlogin";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-export default function LoginForm() {
-  const navigate = useNavigate();
-  const inputRef = useRef(null);
+import { AdminLoginApi } from "../../../api/admin/userFetch";
+export default function AdminLogin() {
+  const navigate = useNavigate()
+   const inputRef = useRef(null);
   const [hide, setHide] = useState(false);
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
+      
     }
   }, []);
   return (
     <>
       <Formik
         initialValues={{
-          emailOrPhone: "",
+          email: "",
           password: "",
         }}
-        validationSchema={loginSchema}
+        validationSchema={AdminLoginSchema}
         onSubmit={(values) => {
-          AuthLogin(values).then((res) => {
-            if (res.data.userData && res.data.token) {
-              localStorage.setItem("user", res.data.token);
-              toast.success("Welcome");
-              navigate("/");
-            }
-            if (res.data.success === false) {
-              toast.error("Password Not Matching");
-            }
-            if (res.data.action === false) {
-              toast.error("Invalid Credentials");
-            } else if (res.data.action === true) {
-              toast.error("The User is Blocked");
-            }
-          });
+          AdminLoginApi(values).then((res)=>{
+            if(res?.data.success){
+              localStorage.setItem("admin", res.data.token);
+                navigate('/admin/dashboard')
+                toast.success('login Success')
+                
+             } if(res?.data.action){
+              toast.error('Invalid Credentials')
+             }  if(res?.data.success=== false) {
+              toast.error('password not match')
+             }
+  
+           }).catch((err)=>console.log(err))
+          
         }}
       >
         {({ errors, touched }) => (
           <Form>
             <div className="md:ml-[150px] mt-5 ml-7">
-              <label htmlFor="emailOrPhone"></label>
+              <label htmlFor="email"></label>
               <Field
-                innerRef={inputRef}
+               innerRef={inputRef}
                 className="md:w-[460px] w-[340px] focus:outline-none bg-slate-50 drop-shadow-md border-zinc-50 h-12 rounded-md hover:drop-shadow-xl"
-                placeholder="Phone/Email"
+                placeholder="Email"
                 style={{ paddingLeft: "20px" }}
-                type="text"
-                name="emailOrPhone"
+                type="email"
+                name="email"
+               
               />
-              {errors.emailOrPhone && touched.emailOrPhone ? (
+              {errors.email && touched.email ? (
                 <div className="text-red-500 font-sans text-sm ">
-                  {errors.emailOrPhone}
+                  {errors.email}
                 </div>
               ) : null}
               <div className="md:w-[460px] w-[340px]  mt-4 bg-slate-50 drop-shadow-lg border-zinc-50 h-12 rounded-md hover:drop-shadow-xl flex">
@@ -67,18 +68,15 @@ export default function LoginForm() {
                   style={{ paddingLeft: "20px" }}
                   type={`${hide ? "title" : "password"}`}
                 />
-                <h1
-                  className="text-2xl mt-3 mr-4 text-gray-500 "
-                  onClick={() => setHide(!hide)}
-                >
+                <h1 className="text-2xl mt-3 mr-4 text-gray-500 " onClick={() => setHide(!hide)}>
                   {hide ? <FaEyeSlash /> : <FaEye />}
                 </h1>
               </div>
               {errors.password && touched.password ? (
-                <div className="text-red-500 font-sans text-sm ">
-                  {errors.password}
-                </div>
-              ) : null}
+                  <div className="text-red-500 font-sans text-sm ">
+                    {errors.password}
+                  </div>
+                ) : null}
 
               <button
                 type="submit"

@@ -4,7 +4,7 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { SignupSchema } from "../../Schema/authSignUp";
 import { useSelector } from "react-redux";
-import { AuthsubmissionApi } from "../../api/signupApi";
+import { AuthsubmissionApi } from "../../api/user/signupApi";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 export default function SignupForm() {
