@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import Brand from "../../assets/paper.png";
+import Brand from "../../assets/healtehter3.png";
 import leftimg from "../../assets/loginAsset.png";
 import otpimg from "../../assets/otp.png";
 import ForgotForm from "./ForgotForm";
@@ -9,7 +9,7 @@ export default function ForgotPassForm() {
     <>
       <div className="bg-white h-screen w-full">
         
-        <div className="flex justify-center items-center py-10">
+        <div className="flex justify-center items-center py-5">
           <img className="w-[150px] " src={Brand} alt="logo_png" />
         </div>
         

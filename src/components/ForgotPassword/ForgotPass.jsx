@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Brand from "../../assets/paper.png";
+import Brand from "../../assets/healtehter3.png";
 import leftimg from "../../assets/loginAsset.png";
 import otpimg from "../../assets/otp.png";
 import { Formik, Form, Field } from "formik";
@@ -29,7 +29,7 @@ export default function ForgotPass() {
             <Loader />
           </div>
         )}
-        <div className="flex justify-center items-center py-10">
+        <div className="flex justify-center items-center py-5">
           <img className="w-[150px] " src={Brand} alt="logo_png" />
         </div>
 
