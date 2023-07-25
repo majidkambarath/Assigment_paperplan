@@ -1,6 +1,6 @@
 import React  from "react";
 import leftimg from "../../assets/loginAsset.png";
-import logo from "../../assets/paper.png";
+import logo from "../../assets/healtehter3.png";
 import LoginForm from "../AuthForm/LoginForm";
 import { NavLink,Navigate } from 'react-router-dom'
 export default function Login() {
@@ -12,7 +12,7 @@ export default function Login() {
       <div className="bg-slate-50 w-full  h-screen flex md:flex-row flex-col">
         <div className="md:w-[600px] md:h-screen  bg-white md:rounded-tr-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img className="w-2/5 md:py-16 py-7 mr-44 " src={logo} alt="img" />
+            <img className="w-2/5 md:py-5 py-7 mr-44 " src={logo} alt="img" />
             <img className="w-3/3" src={leftimg} alt="img" />
           </div>
         </div>

@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import logo from '../../assets/paper.png'
+import logo from '../../assets/healtehter3.png'
 import ClinicSection from './ClinicSection'
 import BusinessSections from './BusinessSections'
 
@@ -9,7 +9,7 @@ function Sections() {
     return (
         <div className='mt-12'>
             <div className="text-center flex justify-center">
-                <img src={logo} className=' h-12 sm:h-12 md:h-12 lg:h-12 mr-3"' alt="logo" />
+                <img src={logo} className='w-[150px]' alt="logo" />
             </div>
 
             <div className='flex justify-center gap-3 align-middle items-center mt-8'>

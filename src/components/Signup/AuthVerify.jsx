@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Brand from "../../assets/paper.png";
+import Brand from "../../assets/healtehter3.png";
 import leftimg from "../../assets/loginAsset.png";
 import otpimg from "../../assets/otp.png";
 import { Formik, Form, Field } from "formik";
@@ -28,11 +28,11 @@ export default function AuthVerify() {
             <Loader />
           </div>
         )}
-        <div className="flex justify-center items-center py-10">
+        <div className="flex justify-center items-center py-5">
           <img className="w-[150px] " src={Brand} alt="logo_png" />
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center ">
           <div className="bg-slate-100 md:h-[450px] md:w-2/3 h-[850px] w-[350px] flex md:flex-row flex-col  rounded-xl shadow-black/20 shadow-xl">
             <div className=" md:w-[500px]">
               <img

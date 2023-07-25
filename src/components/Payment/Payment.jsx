@@ -12,7 +12,7 @@ import { SiGooglepay } from "react-icons/si";
 import { BsCurrencyRupee } from "react-icons/bs";
 import { fetchBookingData } from "../../api/user/bookingApi";
 import { useNavigate } from "react-router-dom";
-import logo from '../../assets/logo.png'
+import logo from '../../assets/healtehter3.png'
 import { toast } from "react-hot-toast";
 
 export default function Payment() {
@@ -56,7 +56,7 @@ const submitPayment = async(total,name,phone,ID)=>{
                 currency: data.order.currency,
                 amount: data.order.amount.toString(),
                 order_id: data.order.id,
-                name: "PaperPlan",
+                name: "Healtehter",
                 description: "Payment for your service",
                 image: `${logo}`,
                 handler: async function (response) {

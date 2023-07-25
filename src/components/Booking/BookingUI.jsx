@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Brand from "../../assets/paper.png";
+import Brand from "../../assets/healtehter3.png";
 import Phone from "../../assets/Group.png";
 import { bookingFormApi } from "../../api/user/bookingApi";
 import { toast } from "react-hot-toast";
@@ -62,7 +62,7 @@ export default function BookingUI() {
   return (
     <>
       <div className="bg-white h-screen w-full">
-        <div className="flex justify-center items-center py-5">
+        <div className="flex justify-center items-center ">
           <img className="w-[150px] " src={Brand} alt="logo_png" />
         </div>
 
@@ -74,7 +74,7 @@ export default function BookingUI() {
                   Book a demo for
                 </h1>
                 <h1 className="text-2xl md:ml-[110px] ml-[60px] w-[300px] font-bold mr-10 font-Montserrat ">
-                  Paperplane Enterprise
+                Healtehter Enterprise
                 </h1>
               </div>
 
