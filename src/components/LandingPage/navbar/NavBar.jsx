@@ -75,15 +75,17 @@ function NavBar() {
             </li>
             <li>
               <a
-                href="https://www.youtube.com/channel/UCCIs3vb1mC15PrdPQBwgdjQ"
+                href="https://youtu.be/8cxXhAqn4Kw"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
               >
                 Videos
               </a>
             </li>
             <li>
+
+       
               <a
-                href="#"
+                href="https://healtether.com/#about"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
               >
                 Blogs
@@ -99,7 +101,7 @@ function NavBar() {
             </li>
             <li>
               <a
-                href="#"
+                href="https://healtether.com/#about"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
               >
                 About Us
@@ -108,11 +110,11 @@ function NavBar() {
             <li className="flex gap-2">
               <button
                 type="button"
-                className="text-white bg-gradient-to-r from-[#4D63DD] to-[#22A1F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+                className="text-white bg-gradient-to-r from-[#06f7eb] to-[#023513] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
               >
                 Download App
               </button>
-              {change ? (
+              {!change ? (
                 <button
                   type="button"
                   onClick={handleLogout}
@@ -124,7 +126,7 @@ function NavBar() {
                 <NavLink to={"/login"}>
                   <button
                     type="button"
-                    className="text-blue-600 bg-white border border-blue-700  hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+                    className="text-blue-600  bg-white border border-blue-700  hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
                   >
                     Login
                   </button>

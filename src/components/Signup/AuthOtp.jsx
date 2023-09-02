@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Brand from "../../assets/healtehter3.png";
-import leftimg from "../../assets/loginAsset.png";
+import leftimg from "../../assets/new.jpg";
 import otpimg from "../../assets/bgremove.png";
 import { BiSolidEditAlt } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
@@ -75,7 +75,7 @@ export default function AuthOtp() {
           <div className="bg-slate-100 md:h-[450px] md:w-2/3 h-[850px] w-[350px] flex md:flex-row flex-col  rounded-xl shadow-black/20 shadow-xl">
             <div className=" md:w-[500px]">
               <img
-                className="md:w-[400px] md:ml-7 ml-3 mt-12"
+                className="md:w-[400px] md:ml-7 ml-3 mt-[80px]"
                 src={leftimg}
                 alt="img-png"
               />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import ChatBot from "../bot/ChatBot";
-import leftSideImage from '../../assets/bgImage.png'
+import leftSideImage from '../../assets/new.jpg'
 import { StartChatBotApi } from "../../api/user/signupApi";
 function MainContent() {
   const handleclick = () => {
@@ -15,14 +15,14 @@ function MainContent() {
         <div>
           <h3 className="text-4xl  md:w-[500px] font-medium">
             Get Your own{" "}
-            <span className="text-[#19BCCC]">Digital clinic on WhatsApp</span>
+            <span className="text-">Digital clinic on WhatsApp</span>
           </h3>
           <h3 className="font-semibold text-4xl text-[#19BCCC]">
             in less than 7 minutes! 🚀
           </h3>
 
           <div className="flex  flex-col md:flex-row gap-3 mt-4">
-            <button className="bg-gradient-to-r hover:bg-gradient-to-l  from-[#4D63DD] to-[#22A1F5] rounded-full py-3 px-5 text-white text-2xl font-semibold">
+            <button className="bg-gradient-to-r hover:bg-gradient-to-l  from-[#06f7eb] to-[#023513] rounded-full py-3 px-5 text-white text-2xl font-semibold">
               Start 15-days trial now
             </button>
             <NavLink to={"/booking"}>
