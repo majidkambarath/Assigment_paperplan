@@ -56,7 +56,7 @@ const AdminNavbar = () => {
             />
           </div>
         </div>
-        <div className="text-lg font-slab hidden lg:block p-3">PaperPlane</div>
+        <div className="text-lg font-slab hidden lg:block p-3">Healtehter</div>
 
         <div className="mt-4 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => (

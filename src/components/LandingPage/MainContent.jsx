@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import ChatBot from "../bot/ChatBot";
+import leftSideImage from '../../assets/bgImage.png'
 import { StartChatBotApi } from "../../api/user/signupApi";
 function MainContent() {
   const handleclick = () => {
@@ -36,7 +37,8 @@ function MainContent() {
 
         <div>
           <img
-            src="https://www.paperplanetech.co/static/media/hero-image.2f231d9891424705d6d5129e181acf92.svg"
+          className=""
+            src={leftSideImage}
             alt=""
           />
         </div>

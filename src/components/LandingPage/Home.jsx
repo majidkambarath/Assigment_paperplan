@@ -27,14 +27,14 @@ export default function Home() {
       <NavBar />
       <div className="mt-32">
       <MainContent />
-      <CompanyCarousel />
-      <TrustCounts />
-      <Sections />
-      <Features />
+      {/* <CompanyCarousel /> */}
+      {/* <TrustCounts /> */}
+      {/* <Sections /> */}
+      {/* <Features />
       <GetStarted />
       <Contact />
-      <AskedQuestions />
-      <Footer />
+      <AskedQuestions /> */}
+      {/* <Footer /> */}
       </div>
     </div>
   )

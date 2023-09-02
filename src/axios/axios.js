@@ -1,6 +1,6 @@
 import axios from 'axios'
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:2222/api',
+    baseURL: 'https://paperplane-backend.onrender.com/api',
     headers: {
         'Content-Type': 'application/json'
     }
