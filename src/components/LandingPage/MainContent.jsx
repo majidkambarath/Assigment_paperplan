@@ -22,7 +22,7 @@ function MainContent() {
           </h3>
 
           <div className="flex  flex-col md:flex-row gap-3 mt-4">
-            <button className="bg-gradient-to-r hover:bg-gradient-to-l  from-[#06f7eb] to-[#023513] rounded-full py-3 px-5 text-white text-2xl font-semibold">
+            <button className="bg-gradient-to-r hover:bg-gradient-to-l  from-[#98fb98] to-[#008000] rounded-full py-3 px-5 text-white text-2xl font-semibold">
               Start 15-days trial now
             </button>
             <NavLink to={"/booking"}>

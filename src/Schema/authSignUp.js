@@ -17,6 +17,11 @@ export const SignupSchema = yup.object().shape({
     .test("isvalidEmail", "Enter a valid Email", (arg) =>
       /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(arg)
     ),
+    phone: yup
+    .string()
+    .trim()
+    .matches(/^[0-9]{10}$/, "Phone number is not valid")
+    .required("Phone number is required"),
   password: yup
     .string()
     .trim()

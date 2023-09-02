@@ -110,11 +110,11 @@ function NavBar() {
             <li className="flex gap-2">
               <button
                 type="button"
-                className="text-white bg-gradient-to-r from-[#06f7eb] to-[#023513] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+                className="text-white bg-gradient-to-r from-[#98fb98] to-[#008000] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
               >
                 Download App
               </button>
-              {!change ? (
+              {token ? (
                 <button
                   type="button"
                   onClick={handleLogout}

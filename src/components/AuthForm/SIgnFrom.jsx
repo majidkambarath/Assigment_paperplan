@@ -8,12 +8,12 @@ import { AuthsubmissionApi } from "../../api/user/signupApi";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 export default function SignupForm() {
-  const phoneNumber = useSelector((state) => state.number.phoneNumber);
+  // const phoneNumber = useSelector((state) => state.number.phoneNumber);
   const navigate = useNavigate()
    const inputRef = useRef(null);
   const [hide, setHide] = useState(false);
   const [chide , setChide] = useState(false);
-const [phone , setphone ] = useState(phoneNumber.phone)
+// const [phone , setphone ] = useState(phoneNumber.phone)
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
@@ -25,7 +25,7 @@ const [phone , setphone ] = useState(phoneNumber.phone)
       <Formik
         initialValues={{
           email:"",
-          phone: phone,
+          phone: "",
           password: "",
         }}
         validationSchema={SignupSchema}
@@ -56,19 +56,19 @@ const [phone , setphone ] = useState(phoneNumber.phone)
                   {errors.email}
                 </div>
               ) : null}
-              <label htmlFor="phoneh"></label>
+              <label htmlFor="phone"></label>
               <Field
                 className="md:w-[400px] w-[300px] focus:outline-none mt-4 bg-slate-50 drop-shadow-md border-zinc-50 h-12 rounded-md hover:drop-shadow-xl"
                 placeholder="Phone"
                 style={{ paddingLeft: "20px" }}
                 type="text"
-                name="phoneh"
-                value={phone}
+                name="phone"
+         
                
               />
-              {errors.phoneh && touched.phoneh ? (
+              {errors.phone && touched.phone ? (
                 <div className="text-red-500 font-sans text-sm ">
-                  {errors.phoneh}
+                  {errors.phone}
                 </div>
               ) : null}
               <div className="md:w-[400px] w-[300px]  mt-4 bg-slate-50 drop-shadow-lg border-zinc-50 h-12 rounded-md hover:drop-shadow-xl flex">

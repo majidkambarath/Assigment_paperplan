@@ -16,9 +16,9 @@ export default function UserRouter() {
     <Routes>
     <Route path="/" element={<Landing/>} />
     <Route path="/login" element={<LoginPage/>} />
-    <Route path="/signup" element={<AuthVerify/>} />
-    <Route path="/otp" element={<AuthOtpPage/>} />
-    <Route path="/authsignup" element={<AuthSignUpPage/>} />
+    {/* <Route path="/signup" element={<AuthVerify/>} />
+    <Route path="/otp" element={<AuthOtpPage/>} /> */}
+    <Route path="/signup" element={<AuthSignUpPage/>} />
     <Route path="/forgotPass" element={<ForgotPage/>} />
     <Route path="/forgotPassOtp" element={<OtpforgotPage/>} />
     <Route path="/forgotPassForm" element={<ForgotPassFormPage/>} />
