@@ -1,12 +1,15 @@
 
-import logo from '../../../assets/healtehter3.png'
+import logo from '../../../assets/newlogo.png'
 function Footer() {
     return (
-        <footer className='bg-gray-200 mt-4 pb-8'>
+        <footer className='bg-teal-600 mt-4 pb-8'>
             <div className='mx-auto p-4  max-w-screen-xl '>
                 <a href="#" className="flex items-center">
                     <img src={logo} className="w-[100px]" alt=" Logo" />
                 </a>
+                <div>
+                    {/* <h1>e</h1> */}
+                </div>
                 <div className='flex flex-wrap gap-5 float-right'>
                     <p>About  us</p>
                     <p>Cancellation Policy</p>

@@ -37,7 +37,7 @@ function MainContent() {
 
         <div>
           <img
-          className=""
+          className="w-[400px]"
             src={leftSideImage}
             alt=""
           />

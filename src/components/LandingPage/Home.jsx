@@ -25,7 +25,7 @@ export default function Home() {
    
         <div>
       <NavBar />
-      <div className="mt-32">
+      <div>
       <MainContent />
       {/* <CompanyCarousel /> */}
       {/* <TrustCounts /> */}
@@ -34,7 +34,7 @@ export default function Home() {
       <GetStarted />
       <Contact />
       <AskedQuestions /> */}
-      {/* <Footer /> */}
+      <Footer />
       </div>
     </div>
   )

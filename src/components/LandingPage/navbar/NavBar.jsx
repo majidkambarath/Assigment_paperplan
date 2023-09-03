@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../../assets/healtehter3.png";
+import logo from "../../../assets/newlogo.png";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
