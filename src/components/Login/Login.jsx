@@ -35,6 +35,12 @@ export default function Login() {
               <NavLink to={'/signup'}>
               <span className="text-green-600 cursor-pointer">Sign up</span>
               </NavLink>
+              <div>
+              <NavLink to={'/admin/login'}>
+              <span className="text-black font-bold underline cursor-pointer">Root Admin</span>
+              </NavLink>
+              </div>
+           
               
                 </h1>
              </div>
