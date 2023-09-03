@@ -18,7 +18,7 @@ function NavBar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
         <NavLink to={"/"}>
           <p className="flex items-center">
-            <img src={logo} className="md:w-[130px] w-[90px] " alt=" Logo" />
+            <img src={logo} className="md:w-[170px] w-[200px] " alt=" Logo" />
           </p>
         </NavLink>
         <div className="flex lg:order-2 gap-2">
@@ -59,7 +59,7 @@ function NavBar() {
             <li>
               <NavLink to={"/"}>
                 <p
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded lg:bg-transparent lg:text-[#19BCCC] lg:p-0 "
+                  className="block py-2 pl-3 pr-4 text-white bg-teal-600 rounded lg:bg-transparent lg:text-[#19BCCC] lg:p-0 "
                   aria-current="page"
                 >
                   Home

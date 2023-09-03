@@ -1,6 +1,6 @@
 import React  from "react";
 import leftimg from "../../assets/new1.jpg";
-import logo from "../../assets/healtehter3.png";
+import logo from "../../assets/newlogo.png";
 import LoginForm from "../AuthForm/LoginForm";
 import { NavLink,Navigate } from 'react-router-dom'
 export default function Login() {
@@ -12,8 +12,8 @@ export default function Login() {
       <div className="bg-slate-50 w-full  h-screen flex md:flex-row flex-col">
         <div className="md:w-[600px] md:h-screen  bg-white md:rounded-tr-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img className="w-2/4 md:py-5 py-7  " src={logo} alt="img" />
-            <img className="w-3/3" src={leftimg} alt="img" />
+            <img className="w-1/2 md:py-5 py-7  " src={logo} alt="img" />
+            <img className="w-3/4" src={leftimg} alt="img" />
           </div>
         </div>
         <div className="md:w-[800px] mt-4 md:mt-0">
@@ -29,11 +29,11 @@ export default function Login() {
              <div className="mt-5 md:ml-[150px] ml-4">
            
              <NavLink to={'/forgotPass'}>
-              <h1 className="text-green-950 font-sans text-md cursor-pointer">Forgot Password?</h1>
+              <h1 className="text-orange-600 font-sans text-md cursor-pointer">Forgot Password?</h1>
              </NavLink>
               <h1 className="text-black font-sans text-md ">Don’t have an account?
               <NavLink to={'/signup'}>
-              <span className="text-green-950 cursor-pointer">Sign up</span>
+              <span className="text-teal-600 cursor-pointer">Sign up</span>
               </NavLink>
               <div>
               <NavLink to={'/admin/login'}>

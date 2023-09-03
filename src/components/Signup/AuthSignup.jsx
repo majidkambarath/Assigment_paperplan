@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import Brand from "../../assets/healtehter3.png";
-import leftimg from "../../assets/new1.jpg";
+import Brand from "../../assets/newlogo.png";
+import leftimg from "../../assets/signlogo.png";
 import otpimg from "../../assets/otp.png";
 import SignupForm from "../AuthForm/SIgnFrom";
 export default function AuthSignup() {
@@ -10,14 +10,14 @@ export default function AuthSignup() {
       <div className="bg-white h-screen w-full">
         
         <div className="flex justify-center items-center py-5">
-          <img className="w-[150px] " src={Brand} alt="logo_png" />
+          <img className="md:w-[150px] w-[150px]  " src={Brand} alt="logo_png" />
         </div>
         
         <div className="flex justify-center items-center -mt-4">
-          <div className="bg-slate-100 md:h-[500px] md:w-2/3 h-[850px] w-[350px] flex md:flex-row flex-col  rounded-xl shadow-black/20 shadow-xl">
+          <div className="bg-slate-100 md:h-[500px] md:w-2/3 h-[950px] w-[350px] flex md:flex-row flex-col  rounded-xl shadow-black/20 shadow-xl">
             <div className=" md:w-[500px]">
               <img
-                className="md:w-[400px] md:ml-7 ml-3 mt-[150px]"
+                className="md:w-[350px] md:ml-7  mt-[100px]"
                 src={leftimg}
                 alt="img-png"
               />
