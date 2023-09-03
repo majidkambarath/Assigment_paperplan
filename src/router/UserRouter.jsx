@@ -11,6 +11,8 @@ import Protect from '../utils/ProtectorRouter/userRouter'
 import ForgotPage from '../pages/User/ForgotPage';
 import OtpforgotPage from '../pages/User/OtpforgotPage';
 import ForgotPassFormPage from '../pages/User/ForgotPassForm';
+import TeamPage from '../pages/User/TeamPage';
+import ServicePage from '../pages/User/ServicePage';
 export default function UserRouter() {
   return (
     <Routes>
@@ -22,6 +24,8 @@ export default function UserRouter() {
     <Route path="/forgotPass" element={<ForgotPage/>} />
     <Route path="/forgotPassOtp" element={<OtpforgotPage/>} />
     <Route path="/forgotPassForm" element={<ForgotPassFormPage/>} />
+    <Route path='/team' element={<TeamPage/>} />
+    <Route path='/services' element={<ServicePage/>} />
     <Route element={<Protect/>}>
     <Route path="/booking" element={<BookingPage/>} />
     <Route path="/payment" element={<PaymentPage/>} />

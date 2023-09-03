@@ -1,24 +1,28 @@
 import { useState } from "react";
 import logo from "../../../assets/newlogo.png";
+import logo2 from "../../../assets/logo2.jpeg";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-hot-toast";
-
+import { IoIosArrowForward } from 'react-icons/io';
 function NavBar() {
   const [show, setShow] = useState(false);
   const token = localStorage.getItem("user");
   const [change, setChange] = useState(true);
-
+  const [mouseMove, setMouseMove] = useState(false);
+  console.log(mouseMove);
   const handleLogout = () => {
     localStorage.removeItem("user");
     toast.success("logout Success");
     setChange(false);
   };
+
   return (
     <nav className="bg-white border-gray-200 shadow-md fixed w-full z-20 top-0 left-0 border-b">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
+      <img src={logo2} className="md:w-[120px] md:-ml-10 w-[100px] " alt=" Logo" />
         <NavLink to={"/"}>
           <p className="flex items-center">
-            <img src={logo} className="md:w-[170px] w-[200px] " alt=" Logo" />
+            <img src={logo} className="md:w-[170px] w-[150px] mr-16 md:mr-0 " alt=" Logo" />
           </p>
         </NavLink>
         <div className="flex lg:order-2 gap-2">
@@ -53,9 +57,9 @@ function NavBar() {
         <div
           className={`items-center justify-between ${
             !show && "hidden"
-          } w-full lg:flex lg:w-auto lg:order-1" id="navbar-cta`}
+          } w-full lg:flex lg:w-auto lg:order-1"  id="navbar-cta`}
         >
-          <ul className="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white ">
+          <ul className="flex  flex-col font-medium p-5 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white ">
             <li>
               <NavLink to={"/"}>
                 <p
@@ -75,17 +79,15 @@ function NavBar() {
             </li>
             <li>
               <a
-                href="https://youtu.be/8cxXhAqn4Kw"
+                href="https://www.youtube.com/@Healtether"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 Videos
               </a>
             </li>
             <li>
-
-       
               <a
-                href="https://healtether.com/#about"
+                href="blog.healtether.com"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 Blogs
@@ -93,20 +95,52 @@ function NavBar() {
             </li>
             <li>
               <a
-                href="#"
+                href="https://healthid.ndhm.gov.in/register"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 ABHA
               </a>
             </li>
             <li>
-              <a
-                href="https://healtether.com/#about"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
+              <p
+                   onMouseEnter={() => setMouseMove(true)}
+                onClick={()=>setMouseMove(!mouseMove)}
+                className="block  relative py-2 cursor-pointer pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 About Us
-              </a>
+              </p>
+              {mouseMove && (
+                <div
+                   
+                   onMouseLeave={() => setMouseMove(false)}
+                  className="w-36 -ml-3 rounded-lg  absolute  mt-2  h-24 bg-slate-100"
+                >
+                  <NavLink to={'/team'}>
+                  <div className="flex ml-3 justify-around">
+                  <h1 className=" text-gray-900  md:hover:text-teal-600  mt-3 ">
+                    Team
+                  </h1>
+                  <h1 className=" text-gray-900   mt-4 ">
+                         <IoIosArrowForward/>
+                  </h1>
+                 </div>
+                  </NavLink>
+                 <NavLink to={'/services'}>
+
+                 <div className="flex ml-3 justify-around">
+                  <h1 className=" text-gray-900  md:hover:text-teal-600  mt-3 ">
+                  Services
+                  </h1>
+                  <h1 className=" text-gray-900   mt-4 ">
+                         <IoIosArrowForward/>
+                  </h1>
+                 </div>
+                  </NavLink>
+                </div>
+                
+              )}
             </li>
+
             <li className="flex gap-2">
               <button
                 type="button"
