@@ -23,7 +23,7 @@ function NavBar() {
         </NavLink>
         <div className="flex lg:order-2 gap-2">
           {/* <button type="button" className="text-white bg-gradient-to-r from-[#4D63DD] to-[#22A1F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 ">Download App</button>
-      <button type="button" className="text-blue-600 bg-white border border-blue-700  hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 ">Login</button> */}
+      <button type="button" className="text-blue-600 bg-white border border-teal-600  hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 ">Login</button> */}
           <button
             onClick={() => setShow(!show)}
             data-collapse-toggle="navbar-cta"
@@ -68,7 +68,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink to={"/payment"}>
-                <p className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent md:hover:text-blue-700 lg:p-0 ">
+                <p className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent md:hover:text-teal-600 lg:p-0 ">
                   Buy Now Pay Later
                 </p>
               </NavLink>
@@ -76,7 +76,7 @@ function NavBar() {
             <li>
               <a
                 href="https://youtu.be/8cxXhAqn4Kw"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 Videos
               </a>
@@ -86,7 +86,7 @@ function NavBar() {
        
               <a
                 href="https://healtether.com/#about"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 Blogs
               </a>
@@ -94,7 +94,7 @@ function NavBar() {
             <li>
               <a
                 href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 ABHA
               </a>
@@ -102,7 +102,7 @@ function NavBar() {
             <li>
               <a
                 href="https://healtether.com/#about"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 lg:p-0 "
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-teal-600 lg:p-0 "
               >
                 About Us
               </a>
