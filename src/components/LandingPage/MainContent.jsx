@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import ChatBot from "../bot/ChatBot";
-import leftSideImage from '../../assets/new.jpg'
+import leftSideImage from '../../assets/new1.jpg'
 import { StartChatBotApi } from "../../api/user/signupApi";
 function MainContent() {
   const handleclick = () => {

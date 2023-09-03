@@ -1,5 +1,5 @@
 import React  from "react";
-import leftimg from "../../../assets/new.jpg";
+import leftimg from "../../../assets/new1.jpg";
 import logo from "../../../assets/healtehter3.png";
 import LoginForm from "../Form/Adminlogin";
 import { NavLink,Navigate } from 'react-router-dom'

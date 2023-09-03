@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Brand from "../../assets/healtehter3.png";
-import leftimg from "../../assets/new.jpg";
+import leftimg from "../../assets/new1.jpg";
 import otpimg from "../../assets/otp.png";
 import SignupForm from "../AuthForm/SIgnFrom";
 export default function AuthSignup() {
