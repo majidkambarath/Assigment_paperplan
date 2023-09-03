@@ -110,7 +110,7 @@ function NavBar() {
             <li className="flex gap-2">
               <button
                 type="button"
-                className="text-white bg-gradient-to-r from-[#98fb98] to-[#008000] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+                className="text-white bg-gradient-to-r from-[#03BF9C] to-[#95aa95] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
               >
                 Download App
               </button>
@@ -118,7 +118,7 @@ function NavBar() {
                 <button
                   type="button"
                   onClick={handleLogout}
-                  className="text-green-700 bg-white border border-green-300  hover:bg-green-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+                  className="text-green-700 bg-white border border-green-300  hover:bg-teal-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
                 >
                   Log out
                 </button>
@@ -126,7 +126,7 @@ function NavBar() {
                 <NavLink to={"/login"}>
                   <button
                     type="button"
-                    className="text-green-700  bg-white border border-green-300  hover:bg-green-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+                    className="text-green-700  bg-white border border-green-300  hover:bg-teal-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center mr-3 md:mr-0 "
                   >
                     Login
                   </button>

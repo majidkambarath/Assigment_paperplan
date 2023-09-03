@@ -111,7 +111,7 @@ export default function SignupForm() {
 
               <button
                 type="submit"
-                className="md:w-[400px] w-[300px] mt-5 bg-green-700 h-12 rounded-md text-white font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300 "
+                className="md:w-[400px] w-[300px] mt-5 bg-teal-600 h-12 rounded-md text-white font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100 duration-300 "
               >
                 Login
               </button>

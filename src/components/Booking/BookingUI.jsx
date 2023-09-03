@@ -67,7 +67,7 @@ export default function BookingUI() {
         </div>
 
         <div className="flex justify-center items-center ml-4 md:ml-0 ">
-          <div className="bg-indigo-200 md:h-[530px] md:w-5/6 h-[1550px] w-[380px] flex md:flex-row flex-col  rounded-xl shadow-black/20 shadow-xl">
+          <div className="bg-emerald-400 md:h-[530px] md:w-5/6 h-[1550px] w-[380px] flex md:flex-row flex-col  rounded-xl shadow-black/20 shadow-xl">
             <div className=" md:w-[500px]">
               <div className=" py-12 ">
                 <h1 className="text-xl md:ml-[157px] ml-[110px] font-Montserrat font-semibold text-black/60">
@@ -86,7 +86,7 @@ export default function BookingUI() {
               <div className="flex md:flex-row flex-col ml-[90px] gap-6 md:ml-6 mt-3">
                 <div className="h-[130px]  w-[150px] rounded-2xl bg-gray-100 drop-shadow-xl ">
                   <div>
-                    <h1 className="text-3xl font-Montserrat font-bold text-blue-600 ml-12 py-8">
+                    <h1 className="text-3xl font-Montserrat font-bold text-green-600 ml-12 py-8">
                       25+
                     </h1>
                   </div>
@@ -96,7 +96,7 @@ export default function BookingUI() {
                 </div>
                 <div className="h-[130px]  w-[150px] rounded-2xl bg-gray-100 drop-shadow-xl ">
                   <div>
-                    <h1 className="text-3xl font-Montserrat font-bold text-blue-600 ml-12 py-8">
+                    <h1 className="text-3xl font-Montserrat font-bold text-green-600 ml-12 py-8">
                       50%
                     </h1>
                   </div>
@@ -106,7 +106,7 @@ export default function BookingUI() {
                 </div>
                 <div className="h-[130px]  w-[150px] rounded-2xl bg-gray-100 drop-shadow-xl ">
                   <div>
-                    <h1 className="text-3xl font-Montserrat font-bold text-blue-600 ml-12 py-8">
+                    <h1 className="text-3xl font-Montserrat font-bold text-green-600 ml-12 py-8">
                       40%
                     </h1>
                   </div>
@@ -202,11 +202,8 @@ export default function BookingUI() {
               </div>
               <button
               type="submit"
-                style={{
-                  background:
-                    "linear-gradient(128.8deg, #4D63DD 28.61%, #22A1F5 99.07%)",
-                }}
-                className="md:w-1/4 w-1/3 h-14 text-white rounded-[35px] font-bold text-xl mt-5 ml-7 hover:shadow-xl "
+               
+                className=" bg-gradient-to-r hover:bg-gradient-to-l  from-[#98fb98] to-[#95aa95] md:w-1/4 w-1/3 h-14 text-white rounded-[35px] font-bold text-xl mt-5 ml-7 hover:shadow-xl "
               >
                 Submit
               </button>
