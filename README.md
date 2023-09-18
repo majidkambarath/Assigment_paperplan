@@ -1,5 +1,5 @@
 # Paperplane_Frontend
-Paperplane_frontEnd is a comprehensive virtual healthcare solution that connects patients and healthcare providers. It offers a range of features to enhance the healthcare experience, including WhatsApp chat integration, appointment booking, secure payments, and data analytics.
+Paperplane_frontEnd is a comprehensive virtual healthcare solution that connects patients and healthcare providers. It offers a range of features to enhance the healthcare experience, including WhatsApp chatBot integration, appointment booking, secure payments, and data analytics.
 
 ## Features
 
